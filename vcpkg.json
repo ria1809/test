@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "threepp",
+  "dependencies": [
+    {
+      "name": "glad",
+      "features": ["gl-api-41"]
+    },
+    "glfw3",
+    "stb"
+  ],
+  "features": {
+    "curl": {
+      "description": "Enable URLFetcher in library.",
+      "dependencies": [
+        "curl"
+      ]
+    },
+    "json": {
+      "description": "Enable JSON support in library. Required to use Fonts.",
+      "dependencies":[
+        "nlohmann-json"
+      ]
+    },
+    "bullet": {
+      "description": "Enable bullet physics in examples",
+      "dependencies": [
+        "bullet3"
+      ]
+    },
+    "assimp": {
+      "description": "Enable assimp model importer",
+      "dependencies": [
+        "assimp"
+      ]
+    },
+    "imgui": {
+      "description": "Enable user interfaces in examples",
+      "dependencies": [
+        {
+          "name": "imgui",
+          "features": ["glfw-binding", "opengl3-binding"]
+        }
+      ]
+    },
+    "matplotlib": {
+      "description": "Enable plotting in examples",
+      "dependencies": [
+        "matplotlib-cpp"
+      ]
+    }
+  }
+}
